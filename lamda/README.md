@@ -4,11 +4,12 @@
 
 람다식은 우리가 마치 value처럼 다룰 수 있는 **익명함수**이다.  
 즉, 변수 안에 함수를 넣을 수 있다.  
-1) 메소드의 파라미터로 넘겨 줄 수가 있다.  
-2) return 값으로 사용할 수 가 있다.  
+1)메소드의 파라미터로 넘겨 줄 수가 있다.  
+2)return 값으로 사용할 수 가 있다.  
 
-> val 람다이름 : (argument type) -> (return type)= {argument -> code body}
+> val 람다이름 : (argument type) -> (return type)= {argument -> code body}  
 > val 람다이름 = {arguments : arguement type  -> code body}  
+
 항상 끝이 return 값이다.  
 
 ```kotlin
