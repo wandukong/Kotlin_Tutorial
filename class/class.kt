@@ -1,5 +1,3 @@
-package org.challenge.kotlin_tutorial
-
 open class Human (var name : String = "Anonymous"){
 
     var age = -1;

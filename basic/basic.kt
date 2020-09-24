@@ -1,7 +1,3 @@
-package org.challenge.kotlin_tutorial
-
-import android.icu.lang.UCharacter.getAge
-
 fun main(){
     hello()
     println(add(3,7))
