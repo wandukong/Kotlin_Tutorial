@@ -25,30 +25,27 @@ Kotlin의 함수는 무조건 값을 반환한다.
 **var** : 값을 바꿀 수 있다.  
 
 ```kotlin
-fun h1() {
-    val a: Int = 10
-    var b: Int = 9
+var a: Int = 10
+var b = 9
 ```
 변수 타입을 : 뒤에 써준다.   
 자동 추론 가능해서 변수타입 안써도 된다.  
 
 
 ```kotlin
-    var c: Int 
+var c: Int 
 ```
 하지만, 선언만 할때는 변수 타입을 명시해줘야 한다.  
 
 ```kotlin
-    var name = "seungwan"
-
-    println("my name is ${name}")
-}
+var name = "seungwan"
+println("my name is ${name}")
 ```
 **${...}** 으로 String 안에서 변수를 사용할 수 있다.   
   
 <hr />
 
-### 조건식
+### 조건문
 
 #### if문
 ```kotlin
@@ -76,8 +73,6 @@ fun checkNum(score : Int){
         2,3 -> println("this is 2 or 3")
     }
 
-
-
     when(score){
         in 90..100 -> println("your are genius")
         in 10..80 -> println("not bad")
@@ -87,20 +82,21 @@ fun checkNum(score : Int){
 ```
 
 ```kotlin
-    var b : Int = when(score){
-        1->1
-        2->2
-        else -> 3
-    }
-    println("b:${b}")
+var b : Int = when(score){
+	1->1
+	2->2
+	else -> 3
+}
 ```
 expression으로 사용시 **else**문이 꼭 있어야 한다.  
 
+<hr />
 
 ### Expression vs Statement
 
 **값을 만들면 표현식(Expression)**   
-Kotlin의 모든 함수는 표현식이다. 왜냐하면 반환값이 명시되어 있지 않을때 Unit(null,void 와 비슷)이라는 값을 return 하기 때문이다.   
+Kotlin의 모든 함수는 표현식이다.  
+왜냐하면 반환값이 명시되어 있지 않을때 Unit(null,void 와 비슷)이라는 값을 return 하기 때문이다.   
 **값을 만들지 않으면 선언문(Statement)**   
 
 <hr />
@@ -108,18 +104,13 @@ Kotlin의 모든 함수는 표현식이다. 왜냐하면 반환값이 명시되�
 ### Array and List
 
 #### Array
-정해져 있는 사이즈가 있다. 사이즈르 바꾸지 못한다.   
+정해져 있는 사이즈가 있다. 사이즈를 바꾸지 못한다.   
 
 ```kotlin
- fun array(){
-
-     val array = arrayOf(1,2,3)
-     val array2 = arrayOf(1,"d",3.4f)
-	 array[0] = 3
- }
+val array = arrayOf(1,2,3)
+val array2 = arrayOf(1,"d",3.4f)
+array[0] = 3
 ```
-
-<hr />
 
 #### List
 **List** : 수정할 수 없는 List   
@@ -141,7 +132,7 @@ Kotlin의 모든 함수는 표현식이다. 왜냐하면 반환값이 명시되�
      }
  }
 ```
-list안의 값에 접근 하려면 list"[INDEX]" 혹은 list.get(INDEX)로 접근이 가능하다.  
+list안의 값에 접근 하려면 list[INDEX] 혹은 list.get(INDEX)로 접근이 가능하다.  
 
 <hr />
 
@@ -149,16 +140,14 @@ list안의 값에 접근 하려면 list"[INDEX]" 혹은 list.get(INDEX)로 접�
 
 #### for
 ```kotlin
-fun for(){
+val students = arrayListOf("Joyce","james","jenny","jenniper")
 
-    val students = arrayListOf("Joyce","james","jenny","jenniper")
-
-    for( name in students){
-        println(name)
-    }
-    for( (index, name) in students.withIndex()){
-        println("${index+1}번째 학생 : ${name} ")
-    }
+for( name in students){
+	println(name)
+}
+for( (index, name) in students.withIndex()){
+	println("${index+1}번째 학생 : ${name} ")
+}
 ```
 withIndex()를 사용하면 index와 같이 사용할 수 있다.  
 
@@ -167,7 +156,6 @@ var sum = 0
 for( i in 1..10){
 	sum += i
 }
-println(sum)
 ```
 **in**: 1~10까지  
 
@@ -175,7 +163,6 @@ println(sum)
 for( i in 1..10 step 2){ 
 	print(i)
 }
-println()
 ```
 **step**: n칸씩   
 
@@ -183,15 +170,12 @@ println()
 for( i in 10 downTo 1){ 
 	print(i)
 }
-println()
 ```
 **downTo** : n까지 내림차순  
 
 ```kotlin
 for( i in 1 until 100){ 
 	print(i)
-}
-	println()
 }
 ```
 **until**: 1~n-1까지      
@@ -215,7 +199,7 @@ val lastName : String? = "Hong"
 val fulName = name +" " + (lastName?: "No LastName") 
 println(fulName)
 ```
-**?:**: lastName이 null 이면 해당 문자열 반환한다.  
+**?:** : lastName이 null 이면 해당 문자열 반환한다.  
 
 ```kotlin
 var email : String ?
