@@ -11,7 +11,7 @@
 
 <hr />
 
-###Copyright ©  
+### Copyright ©  
 Code with Joyce(https://www.youtube.com/user/soja0524)  
 gitHub(https://github.com/joyceHong0524/youtube_kotlin_demo_app)  
 
