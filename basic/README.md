@@ -190,16 +190,15 @@ var name = "joyce"
 var numllName : String? = null
 
 var nameInUpperCase = name.toUpperCase()
-var nullName = numllName?.toUpperCase();
+var nullName = numllName?.toUpperCase(); // null이 아닐경우만 toUpperCase()
 ```
-**?** : 엘비스 연산자, 해당 값이 null일 수도 있다는 것을 가리킨다.  
 
 ```kotlin
 val lastName : String? = "Hong"
-val fulName = name +" " + (lastName?: "No LastName") 
+val fulName = name +" " + (lastName?: "No LastName")  // lastName이 null이면 해당 문자열 반환한다. 
 println(fulName)
 ```
-**?:** : lastName이 null 이면 해당 문자열 반환한다.  
+**`?:`** : 엘비스 연산자, 해당 값이 null일 수도 있다는 것을 가리킨다.   
 
 ```kotlin
 var email : String ?
