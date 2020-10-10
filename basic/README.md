@@ -117,6 +117,13 @@ array[0] = 3
 **MutableList** : 수정할 수 있는 List, 대표적으로 arrayList   
 ```kotlin
  fun array(){
+ 
+	var a = mutableListOf(1,2,3)
+    a.add(4)
+    a.removeAt(1)
+    a[0] = 0
+    a.shuffle()
+    println(a)
 
      val list = listOf(1,2,3)
      val list2 = listOf(1,"d",3.4f)
@@ -133,6 +140,25 @@ array[0] = 3
  }
 ```
 list안의 값에 접근 하려면 list[INDEX] 혹은 list.get(INDEX)로 접근이 가능하다.  
+
+#### Map
+Key - Value 값으로 이루어진 구조.
+```kotlin
+val map1 = mutableMapOf(
+	"양승완" to "01012341234",
+	"오연서" to "01012315512"
+)
+    
+map1.remove("양승완")
+println(map1.get("오연서"))
+
+val map2 = mapOf(	// mapOf는 unmutable 해서 수정 불가.
+	Pair("양승완","123123"),
+	Pair("오연서","948373")
+)
+
+println(map2.get("양승완"))
+```
 
 <hr />
 
